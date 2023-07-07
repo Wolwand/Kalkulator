@@ -1,0 +1,111 @@
+.dugmici {}
+
+8338ec .sedam,
+.osam,
+.devet,
+.podjeljeno,
+.cetri,
+.pet,
+.sest,
+.jedan,
+.dva,
+.tri,
+.puta,
+.minus,
+.jednako,
+.tacka,
+.nula,
+.plus {}
+
+
+
+.sedam,
+.osam,
+.devet,
+.podjeljeno,
+.cetri,
+.pet,
+.sest,
+.jedan,
+.dva,
+.tri,
+.puta,
+.minus,
+.jednako,
+.tacka,
+.nula,
+.plus::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg,#232323,#4a4a4a);
+    border-radius: 10px;
+    box-shadow: -10px -10px -10px rgba(225, 225, 225, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+}
+
+
+(to bottom right, #9f86c0, #6d6875, #7209b7)
+
+
+
+
+justify-content: center;
+    display: flex;
+    font-size: 5rem;
+    background: rgba(26, 23, 23, 0.35);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    max-width: 500px;
+    height: 40rem;
+    width: 90%;
+    border: 3px solid #050f09;
+    color: #344e41;
+    border-radius: 40px;
+    text-align: end;
+    margin: 5vh auto 0;
+    z-index: 0;
+    position: relative;
+
+
+
+    <div id="dugmici">
+        <div class="brisanje">
+            <button class="sve" onclick="display.value ='' ">CE</button>
+            <button class="jedno" onclick="display.value = display.value.toString().slice(0,-1) "><i
+                    class="fa-solid fa-delete-left"></i></button>
+        </div>
+        <div class="prvi-red">
+            <button class="dugme" value="7" onclick="display.value +='7' ">7</button>
+            <button class="dugme" value="8" onclick="display.value +='8' ">8</button>
+            <button class="dugme" value="9" onclick="display.value +='9' ">9</button>
+            <button class="dugme" onclick="display.value +='/' ">/</button>
+        </div>
+        <div class="drugi-red">
+            <button class="dugme" value="4" onclick="display.value +='4' ">4</button>
+            <button class="dugme" value="5" onclick="display.value +='5' ">5</button>
+            <button class="dugme" value="6" onclick="display.value +='6' ">6</button>
+            <button class="dugme" onclick="display.value +='*' ">*</button>
+        </div>
+        <div class="treci-red">
+            <button class="dugme" value="1" onclick="display.value +='1' ">1</button>
+            <button class="dugme" value="2" onclick="display.value +='2' ">2</button>
+            <button class="dugme" value="3" onclick="display.value +='3' ">3</button>
+            <button class="dugme" onclick="display.value +='-' ">-</button>
+        </div>
+        <div class="cetvrti-red">
+            <button class="dugme" value="0" onclick="display.value +='0' ">0</button>
+            <button class="dugme" value="." onclick="display.value +='.' ">.</button>
+            <button class="dugme" onclick="display.value +='+' ">+</button>
+            <button id="jednako" class="dugme" onclick="display.value = eval(display.value) ">=</button>
+        </div>
+    </div>
+
+
+    let.display = document.getElementById('dugmici');
+
+    let.buttons = document.getElementsByClassName('dugme');
